@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="البوابة التعليمية">
+    <meta property="og:description" content="Math 366">
+    <meta property="og:image" content="Images/Login/edunet-w-logo.png">
+    <meta property="og:url" content="https://www.edunet.bh/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="البوابة التعليمية">
+    <title>البوابة التعليمية</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="Styles/Custom/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/fontawesome-free-6.5.2-web/css/fontawesome.css" rel="stylesheet" />
+    <link href="Styles/fontawesome-free-6.5.2-web/css/brands.css" rel="stylesheet" />
+    <link href="Styles/fontawesome-free-6.5.2-web/css/solid.css" rel="stylesheet" />
+
+    <link href="Styles/Custom/login-rtl.css" rel="stylesheet" />
+
+    <style>
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 500px;
+                margin: 1.75rem auto;
+            }
+        }
+
+        .modal-dialog-centered {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            pointer-events: none;
+        }
+
+        .modal {
+            padding-right: 0 !important;
+        }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128429116-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128429116-1');
+    </script>
+
+
+
+
+</head>
+
+
+<body class="main-body" dir="ltr">
+    <div class="container main-body-container">
+        <div id="header">
+            <div id="login_logo" class="eduntLogo">
+                <img src="Images/Login/edunet-w-logo.png" class="edunet_login_logo" alt="">
+                <img src="Images/Login/edunet-horizontal-w.svg" class="edunet_horiz_logo" alt="">
+            </div>
+            <div class="btn-lang" style="margin-top:-5%;">
+                <button class="btn btn-default languageSwitch" type="button" id="en-us">
+                    <i class="fa-solid fa-earth-americas fa-xl"></i>
+                    English
+                </button>
+                <br />
+            </div>
+        </div>
+        <div class="row main-wrapper">
+            <div class="login-grid-wrapper">
+                <!--Login Div-->
+                <div class="main-login-container col-md-5 col-sm-12 col-xs-12">
+                    <div class="form-group col-lg-12 text-center">
+                        <h3 class="login_to_edunet_label loginHeading heading">
+                            تسجيل الدخول للبوابة التعليميّة
+                        </h3>
+                    </div>
+
+                    <div class="form-group col-lg-12 text-center">
+                        <div id="content_wrapper">
+                            <div id="login_wrapper">
+                                <div class="row form-box">
+                                    <div class="error-message"></div>
+                                    <div class="login-form-box-top col-md-12">
+                                        <div class="login-block" id="login">
+
+
+
+
+                                            <!-- Start New Login Form -->
+
+                                            <div class="col-lg-12 text-center adminLoginDiv">
+                                                <form action="/" class="form_id" id="UserLoginForm" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="81yl9yICEPx6LxJ5hb1XIImVovUbMdst7eAqNCcwQCuG7Iz3LsgnL4lUY1IU9JovifdoNA6ZscIj4Sk_c1heObqT6Raoblc-6Toq110ZQpU1" />
+                                                    <fieldset>
+                                                        <div class="form-group required">
+                                                            <label for="UserUsername" class="control-label"></label>
+                                                            <input class="input-lg form-control form-control userIdTB" data-val="true" data-val-required="يرجى إدخال اسم المستخدم" id="UserUsername" maxlength="100" name="Username" placeholder="اسم المستخدم" tabindex="1" type="text" value="" />
+                                                            <span class="field-validation-valid" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                                                        </div>
+                                                        <div class="form-group required password-wrapper">
+                                                            <label for="UserPassword" class="control-label"></label>
+                                                            <input autocomplete="off" class="input-lg form-control form-control passwordTB" data-val="true" data-val-required="يرجى إدخال كلمة المرور" id="UserPassword" maxlength="40" name="Password" placeholder="كلمة المرور" tabindex="2" type="password" />
+                                                            <i class="fa fa-eye" aria-hidden="true" onclick="ShowPassword()"></i>
+                                                            <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+
+                                                        </div>
+                                                    </fieldset>
+                                                    <div class="form-group row col-lg-12 login-actions">
+                                                        <div class="btn-forgot-container">
+                                                            <a id="lnkForgotPwd" href="https://www.edunet.bh/Account/ForgotPassword" class="btn-link btn-forgot">نسيت كلمة المرور ؟</a>
+                                                            <a href="https://www.edunet.bh/Helpdesk/Orders" class="btn-link btn-forgot float-left">الدعم الفني</a>
+                                                        </div>
+                                                        <button class="btn btn-lg btn-login" type="button" id="LoginBtn">
+                تسجيل الدخول
+                &nbsp;
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="col-lg-12 log-gm" style="margin-bottom:50px">
+                                                <p style="margin-bottom:25px">تسجيل دخول الطلبة والمعلمين</p>
+                                                <button class="btn btn-lg sign-in-logo" onclick="location.href='/Account/SignIn'" style="border-top-right-radius: 10px !important; border-top-left-radius: 10px;height: 45px;font-size:1.3rem;">
+        <i class="fa-brands fa-windows fa-lg"></i>
+        &nbsp;
+        الحساب المدرسي
+    </button>
+                                            </div>
+
+                                            <!-- End New Login Form -->
+
+                                            <!-- End Login Form -->
+                                        </div>
+
+                                        <div class="form-group row col-lg-12 login-actions" style="margin:0;font-size: 1.2rem;">
+                                            <p>جميع الحقوق محفوظة &#169; وزارة التربية والتعليم.</p>
+                                            مملكة البحرين
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Login Div-->
+                <div class="col-md-7 col-sm-12 col-xs-12 welcome-section-wrapper">
+                    <h3 style="padding-top:45px;">مرحباً بك في البوابة التعليمية</h3>
+                    <h1 style="font-size:40px;">تعلّم ... وابتكار</h1>
+                    <h1 style="font-size:40px;">نحو تعليم متطوّر</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Default -->
+    <div class="modal fade" id="Ramadan-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-right">
+                    <button type="button" style="color:black;opacity:1;float:left;" class="close" data-dismiss="modal">×</button>
+
+                    <h5 class="modal-title" style="font-size:14px;font-weight:700"> رمضان كريم <i class="fa-solid fa-moon" style="color:#b4a08d !important"></i></h5>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center" style="direction:rtl;font-size:14px !important;padding-top:20px;padding-bottom:20px;line-height: normal;">
+                        مبارك عليكم الشهر الفضيل، وأعاده الله علينا وعليكم بالخير واليُمن والبركات.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="byrushan/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="byrushan/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="byrushan/vendors/bower_components/flot/jquery.flot.js"></script>
+    <script src="byrushan/vendors/bower_components/flot/jquery.flot.resize.js"></script>
+    <script src="byrushan/vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+    <script src="byrushan/vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script src="byrushan/vendors/bower_components/moment/min/moment.min.js"></script>
+    <script src="byrushan/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="byrushan/vendors/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="byrushan/vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="byrushan/vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+    <script src="byrushan/vendors/bower_components/Waves/dist/waves.min.js"></script>
+    <script src="byrushan/vendors/bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="byrushan/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="byrushan/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+
+
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
+
+<!-- <script type="text/javascript">
+    var submitButton = document.querySelector("#LoginBtn")
+    submitButton.addEventListener("click", function(e) {
+        if ($(".userIdTB").val().length > 0 && $(".passwordTB").val().length > 0 && $(".form_id").valid()) {
+            $(this).text('الرجاء الانتظار ....');
+            $(this).attr('disabled', 'disabled');
+            $(this).parents('form').submit();
+        }
+        $(window).load(function() {
+            $('#LoginBtn').attr('disabled', true);
+        });
+    });
+</script> -->
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        //$('#Ramadan-modal').modal('show');
+        $(document).on('click', '.languageSwitch', function(event) {
+            var lang = $(this).attr('id');
+            $.ajax({
+                url: "/Language/SetCulture",
+                datatype: "text",
+                data: {
+                    culture: lang
+                },
+                type: "GET",
+                success: function(data) {
+                    location.reload(true);
+                    document.location.href = String(document.location.href).replace(/#/, "");
+                },
+                error: function() {
+                    alert('error');
+                }
+            });
+        });
+    });
+
+    function ShowPassword() {
+        var x = document.getElementById("UserPassword");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD-AQ6FwjbMlCFnw3e0KV7PLZR7hYdEYBw",
+        authDomain: "edunet-bh.firebaseapp.com",
+        projectId: "edunet-bh",
+        storageBucket: "edunet-bh.firebasestorage.app",
+        messagingSenderId: "686683249071",
+        appId: "1:686683249071:web:bd8657ece6548249d5775a"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+
+<script src="Scripts/Login.js"></script>
+</script>
+</body>
+
+</html>
