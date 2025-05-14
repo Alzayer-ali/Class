@@ -3,358 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <title>6 phys 2</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        *{
-            font-family: "Tajawal";
-
-        }
-        body {
-            background-color: #111827;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-        }
-        .container {
-            max-width: 80%;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .profile-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background-color: #1f2937;
-            padding: 3rem;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-            margin-bottom: 4rem;
-            border: 1px solid #374151;
-        }
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            border: 5px solid #4a5568;
-        }
-        .profile-name {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #f9fafb;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.025em;
-        }
-        .profile-about {
-            font-size: 1.25rem;
-            color: #d1d5db;
-            line-height: 1.75;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        .projects-section {
-            margin-bottom: 4rem;
-        }
-        .projects-heading {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #e4e2e2;
-            margin-bottom: 0;
-            text-align: center;
-            letter-spacing: -0.025em;
-            background-image: linear-gradient(to right, #1f2937, #374151);
-            padding: 1.25rem;
-            border-radius: 0.75rem;
-            border: 1px solid #4a5568;
-        }
-        .project-card {
-            background-color: #1f2937;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            border: 1px solid #374151;
-            width: 95%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 2.5rem;
-        }
-        .project-card:hover {
-            transform: translateY(-0.5rem);
-            /* scale: 1.04; */
-            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.4), 0 3px 6px -1px rgba(0, 0, 0, 0.3);
-        }
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.025em;
-        }
-        .project-description {
-            font-size: 1.1rem;
-            color: #d1d5db;
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
-        }
-        .contact-section {
-            background-color: #1f2937;
-            padding: 3rem;
-            border-radius: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-            margin-bottom: 0;
-            color: #ffffff;
-            /* border: 1px solid #374151; */
-        }
-        .contact-heading {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 2rem;
-            letter-spacing: -0.025em;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        .social-icon {
-            font-size: 1.75rem;
-            color: #e0f2fe;
-            transition: color 0.3s ease;
-        }
-        .social-icon:hover {
-            color: #4f46e5;
-        }
-        footer {
-            text-align: center;
-            padding: 2.5rem;
-            background-color: #1d4ed8;
-            color: #f8fafc;
-            border-top: 1px solid #4a5568;
-            border-radius: 0.75rem;
-            margin-top: 4rem;
-        }
-        .top-border{
-            border-top: 1px solid #4a5568;
-        }
-
-        .scroll-container {
-            overflow-x: auto;
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-left: -1rem;
-            margin-right: -1rem;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-        }
-        .scroll-container::-webkit-scrollbar {
-            height: 0.5rem;
-        }
-        .scroll-container::-webkit-scrollbar-track {
-            background: #374151;
-            border-radius: 0.75rem;
-        }
-        .scroll-container::-webkit-scrollbar-thumb {
-            background: #6b7280;
-            border-radius: 0.75rem;
-        }
-        .scroll-container::-webkit-scrollbar-thumb:hover {
-            background: #9ca3af;
-        }
-
-        .project-card {
-            flex: 0 0 auto;
-            width: 90%;
-            max-width: 400px;
-            margin-left: 1rem;
-            margin-right: 1rem;
-            scroll-snap-align: start;
-            text-align: right;
-        }
-        .contact-button {
-            background-color: #4f46e5;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: background-color 0.3s ease, transform 0.3s;
-            margin-top: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            border: 0;
-        }
-        .contact-button:hover {
-            background-color: #6d28d9;
-            transform: scale(1.05);
-        }
-
-        .a-button {
-            background-color: #4f46e5;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: background-color 0.3s ease, transform 0.3s;
-            /* margin-top: 1.5rem; */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            border: 0;
-            bottom: 2px;
-        }
-        .a-button:hover {
-            background-color: #6d28d9;
-            transform: scale(1.05);
-        }
-
-        .a-button a{
-            color: white;
-            text-decoration: none;
-        }
-
-
-        /* Media query for screens smaller than 640px (sm breakpoint in Tailwind is 640px) */
-        @media (max-width: 640px) {
-            .profile-section {
-                padding: 2rem;
-            }
-            .profile-image {
-                width: 120px;
-                height: 120px;
-            }
-            .profile-name {
-                font-size: 1.75rem;
-            }
-            .profile-about {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-            .projects-heading {
-                font-size: 1.75rem;
-                margin-bottom: 2rem;
-                padding: 1rem;
-            }
-            .project-card {
-                padding: 1.5rem;
-                max-width: 70%;
-            }
-            .project-title {
-                font-size: 1.25rem;
-            }
-            .project-description {
-                font-size: 0.9rem;
-            }
-            .contact-section {
-                padding: 2rem;
-                border: none;
-                /* margin: auto 3px auto 30px; */
-            }
-            .contact-heading {
-                font-size: 1.75rem;
-                margin-bottom: 1.5rem;
-            }
-            .social-icons {
-                gap: 1rem;
-            }
-            .social-icon {
-                font-size: 1.5rem;
-            }
-            footer {
-                padding: 2rem;
-            }
-            .container{
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ai-chat.css">
 </head>
-<body class="bg-gray-900" dir="rtl">
-    <div class="container">
-        <section class="profile-section">
-            <img src="profile.jpg" alt="photo" class="profile-image">
-            <h1 class="profile-name">علي الزاير</h1>
-            <p class="profile-about">
-                مبرمج مواقع ويب وتطبيقات بلغة البايثون، ومصمم جرافيكي ومصور فوتوغرافي.
-            </p>
-        </section>
+<body>
+    
+    <header>
+        <div class="headline">
+          <div class="inner">
+            <h1 dir="rtl">6 فيز 2</h1>
+            <p dir="rtl">اختيار طالب عشوائي</p>            
+          </div>
+          <div class="click-counter">
+            <h3 id="count">0</h3>
+            <h3 dir="rtl">عدد المشاركات:</h3>
+          </div>
+        </div>
+      </header>
+    <div class="all">
+        <div class="students-grid" id="studentsContainer"></div>
+        <div class="button-container">
+            <button class="random-btn random-btn2" onclick="selectRandomstudent()">اختر طالبًا عشوائيًا</button>
+            <button class="reset-btn" onclick="resetstudents()"><img class="reset-icon" src="photos/reload.png" alt=""></button>
+        </div>
 
-        <section class="projects-section">
-            <h2 class="projects-heading">أعمالي</h2>
-            <div class="scroll-container">
-                <div class="project-card">
-                    <h3 class="project-title">المشروع 1: موقع اختيار طالب عشوائي</h3>
-                    <p class="project-description">
-                        موقع يحتوي على أسماء وصور الطلاب، ومهمته اختيار طلاب عشوائيون للتفاعل في الصف، وتم دعم الموقع بنموذج الذكاء الاصطناعي Gemini.
-                    </p>
-                    <button class="a-button">
-                        <a href="class">زيارة المشروع</a>
-                    </button>
-                </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">المشروع 2: لعبة XO</h3>
-                    <p class="project-description">
-                        صفحة تحوي لعبة XO بفكرة مبتكرة، حيث أن اللعبة لا يوجد تعادل فيها.
-                    </p>
-                    <button class="a-button">
-                        <a href="XO">زيارة المشروع</a>
-                    </button>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">المشروع 3: صفحة إسلامية</h3>
-                    <p class="project-description">
-                        صفحة تم تطويرها عام 2023، تحوي بعضًا من سور القرآن الكريم، وبعضًا من الأدعية والزيارات.
-                    </p>
-                    <button class="a-button">
-                        <a href="Quran">زيارة المشروع</a>
-                    </button>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <h2 class="contact-heading">تواصل معي</h2>
-            <p class="text-lg text-gray-400 mb-4">
-                لا تتردد في التواصل معي عبر مواقع التواصل الاجتماعي الخاصة بي.
-            </p>
-            <div class="social-icons">
-                <a href="https://wa.me/97337385899" class="social-icon" aria-label="LinkedIn"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://github.com/Alzayer-ali" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:ali.alzayer2007@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-            <button class="contact-button">
-                <i class="fas fa-envelope"></i> تواصل معي
-            </button>
-        </section>
+        <!-- Popup -->
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <img id="popupImage" src="" alt="student">
+            <h2 id="popupName"></h2>
+            <div id="popupId"></div>
+            <button class="popup-btn" id="ok" onclick="closePopup()">حسنًا</button>
+        </div>
     </div>
 
-    <!-- <footer class="top-border">
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer> -->
+      <!-- AI Chat Button -->
+  <div id="aiChatButton" class="ai-chat-button">
+    <span>🤖</span>
+  </div>
+
+  <!-- AI Chat Interface -->
+  <div id="aiChatWindow" class="ai-chat-window">
+    <div class="ai-chat-header">
+      <button id="closeChatButton" class="btn-close"></button>
+      <h5>الذكاء الاصطناعي</h5>
+    </div>
+    <div id="chatMessages" class="ai-chat-messages"></div>
+    <div class="ai-chat-input">
+      <button id="sendMessageButton" class="btn btn-primary">إرسال</button>
+      <input type="text" id="chatInput" placeholder="اكتب رسالتك..." dir="rtl">
+    </div>
+  </div>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="OurPage.html">من نحن؟</a>
+                <a href="https://wa.me/97337385899">تواصل معنا</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </div>
+
+            <div class="copyright" dir="rtl">
+              <p>رقم الإصدار: V1.1.5</p>
+                &copy; إعداد الطالبين "علي الزاير - جعفر علي حسن"
+            </div>
+        </div>
+    </footer>
+    
+    <script src="JavaScript.js"></script>
+    <script src="script.js"></script>
+    <script src="ai-chat.js"></script>
 </body>
 </html>
