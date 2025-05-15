@@ -150,15 +150,12 @@ function checkAllCompleted() {
             resetAllButton.textContent = 'إعادة تعيين الكل';
             resetAllButton.className = 'random-btn button-container';
             resetAllButton.onclick = resetstudents;
-
-            // Center the button:
             resetAllButton.style.display = 'block';
-            resetAllButton.style.margin = '20px auto'; // Add top margin and center
-            resetAllButton.style.textAlign = 'center'; // Center the text within the button (optional)
+            resetAllButton.style.margin = '20px auto';
+            resetAllButton.style.textAlign = 'center';
 
             document.querySelector('.all').appendChild(resetAllButton);
         } else {
-            // Make sure button is visible and centered if it already exists
             resetAllButton.style.display = 'block';
             resetAllButton.style.margin = '20px auto';
             resetAllButton.style.textAlign = 'center';
